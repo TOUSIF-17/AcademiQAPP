@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 import mammoth from 'mammoth';
-import pdf from 'pdf-parse';
+import * as pdf from 'pdf-parse';
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
 
 // Verify JWT token

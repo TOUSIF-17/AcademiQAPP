@@ -39,7 +39,7 @@ A comprehensive web application that automates faculty research profile manageme
   - PDF parsing with pdf-parse
   - Word document processing with mammoth
 - **AI/NLP**: 
-  - z-ai-web-dev-sdk for AI summarization
+  - TextRank/BART summarization 
   - Custom TextRank implementation
   - Sentiment analysis
 

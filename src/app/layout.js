@@ -1,3 +1,4 @@
+import React from 'react';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -45,3 +46,4 @@ export default function RootLayout({
     className: `${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`
   }, /*#__PURE__*/React.createElement(DevtoolsBlocker, null), children, /*#__PURE__*/React.createElement(Toaster, null)));
 }
+

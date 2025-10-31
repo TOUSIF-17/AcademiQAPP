@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -224,3 +226,4 @@ export default function FeedPage() {
     disabled: currentPage === totalPages
   }, "Next"))));
 }
+

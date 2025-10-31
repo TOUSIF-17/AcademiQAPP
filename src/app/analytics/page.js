@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+
 
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
@@ -235,3 +237,4 @@ export default function Analytics() {
     className: "font-bold text-blue-600"
   }, (author.citations / Math.max(author.publications, 1)).toFixed(1), " avg cites")))))))));
 }
+

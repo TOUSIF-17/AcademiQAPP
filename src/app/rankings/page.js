@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -240,3 +242,4 @@ export default function Rankings() {
     className: "text-sm text-slate-600"
   }, "Calculated as average citations per publication, with bonuses for recent high-impact work.")))))));
 }
+

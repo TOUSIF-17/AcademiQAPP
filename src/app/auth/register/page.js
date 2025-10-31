@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -213,3 +215,4 @@ export default function RegisterPage() {
     className: "text-blue-600 hover:underline"
   }, "Sign in")))));
 }
+

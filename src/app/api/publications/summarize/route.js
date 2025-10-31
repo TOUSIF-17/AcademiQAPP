@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 import summarizationService from '@/services/summarizationService';
 import mammoth from 'mammoth';
-import pdf from 'pdf-parse';
+import * as pdf from 'pdf-parse';
 import { db } from '@/lib/db';
 
 // Force Node.js runtime – required for pdf-parse/mammoth/Buffer

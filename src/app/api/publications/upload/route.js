@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-import pdf from 'pdf-parse';
+import * as pdf from 'pdf-parse';
 import mammoth from 'mammoth';
 export async function POST(request) {
   try {

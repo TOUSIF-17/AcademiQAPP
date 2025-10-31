@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
@@ -195,3 +197,4 @@ export default function HomePage() {
     className: "border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
   }, /*#__PURE__*/React.createElement("p", null, "\xA9 2025 AcademiQ. All rights reserved.")))));
 }
+

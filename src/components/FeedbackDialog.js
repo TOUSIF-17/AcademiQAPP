@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -169,3 +171,4 @@ export default function FeedbackDialog({
     className: "h-4 w-4 mr-2 animate-spin"
   }), "Submitting...") : 'Submit Feedback')))));
 }
+
