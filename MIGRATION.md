@@ -17,6 +17,10 @@ Where backups are
 - Full backup of original TypeScript sources: `original_ts_backup_20251031215424/`
 - Many original files were also preserved as `*.bak` alongside converted files in `src/`.
 
+Consolidated backups
+
+- All `*.bak` files have been moved into `original_ts_backup_final_cleanup_20251031/` and the original `*.bak` copies were removed from `src/` to keep the repo clean. The `original_ts_backup_20251031215424/` folder is still present (full backup tree).
+
 Recommended next steps
 
 1. Inspect the `converted/` tree and `src/` to confirm behavior and run the app locally.
