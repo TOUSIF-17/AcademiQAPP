@@ -1,0 +1,72 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  name          String?
+  password      String?
+  userType      String   @default("faculty") // faculty, student
+  department    String?
+  bio           String?
+  profileImage  String?
+  citations     Int      @default(0)
+  hIndex        Int      @default(0)
+  teachingWeight Float   @default(1.0)
+  publications  Publication[]
+  feedback      Feedback[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Publication {
+  id                  String   @id @default(cuid())
+  title               String
+  abstract            String?
+  fullText            String?
+  fileName            String?
+  filePath            String?
+  summary             String?
+  authors             String?
+  journal             String?
+  volume              String?
+  issue               String?
+  pages               String?
+  year                Int?
+  doi                 String?
+  citations           Int      @default(0)
+  authorId            String
+  author              User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  keywords            String?
+  publicationDate     DateTime?
+  feedback            Feedback[]
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model Feedback {
+  id          String   @id @default(cuid())
+  content     String
+  sentiment   String?  // positive, negative, neutral
+  sentimentScore Float?
+  facultyId   String
+  faculty     User     @relation(fields: [facultyId], references: [id], onDelete: Cascade)
+  publicationId String?
+  publication Publication? @relation(fields: [publicationId], references: [id], onDelete: SetNull)
+  studentName String?
+  studentEmail String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
