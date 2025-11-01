@@ -1,5 +1,6 @@
 // server.js - Next.js Standalone + Socket.IO
-import { setupSocket } from '@/lib/socket';
+// Use a relative path so Node (ESM) can resolve the module at runtime
+import { setupSocket } from './src/lib/socket.js';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import next from 'next';

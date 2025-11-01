@@ -2,6 +2,7 @@
   "name": "nextjs_tailwind_shadcn_ts",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
   "dev": "nodemon --exec \"node server.js\" --watch server.js --watch src --ext js,jsx 2>&1 | tee dev.log",
   "dev:win": "powershell -NoProfile -Command \"nodemon --exec 'node server.js' --watch server.js --watch src --ext js,jsx 2>&1 | Tee-Object -FilePath dev.log\"",

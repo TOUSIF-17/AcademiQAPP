@@ -24,7 +24,7 @@ A comprehensive web application that automates faculty research profile manageme
 
 ### Frontend
 - **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript 5
+- **Language**: JavaScript/ReactJS
 - **Styling**: Tailwind CSS 4
 - **UI Components**: shadcn/ui (New York style)
 - **Icons**: Lucide React
@@ -67,11 +67,11 @@ src/
 │   ├── rankings/          # Rankings page
 │   ├── analytics/         # Analytics dashboard
 │   ├── profile/           # User profile
-│   └── page.tsx           # Landing page
+│   └── page.jsx           # Landing page
 ├── components/            # Reusable components
 │   ├── ui/               # shadcn/ui components
-│   ├── FeedbackDialog.tsx
-│   └── FeedbackView.tsx
+│   ├── FeedbackDialog.js
+│   └── FeedbackView.js
 ├── hooks/                # Custom React hooks
 ├── lib/                  # Utility libraries
 │   ├── db.ts            # Database client
@@ -106,7 +106,7 @@ src/
 
 4. **Start the development server**
    ```bash
-   npm run dev
+   npm run dev:win #(for windows)
    ```
 
 5. **Open your browser**
@@ -139,22 +139,8 @@ The application uses the following main entities:
 - **Session Management**: Client-side session storage (production should use secure cookies)
 - **Role-Based Access**: Different features based on user roles
 
-## 🤖 AI Summarization Pipeline
-
-### Extractive Summarization (TextRank)
-- Graph-based ranking algorithm
-- Identifies important sentences
-- Preserves original text structure
-
-### Abstractive Summarization (BART-like)
-- Uses z-ai-web-dev-sdk for AI generation
-- Creates novel sentences
-- Captures semantic meaning
-
-### Hybrid Approach
-- Combines both methods
-- Optimizes for coherence and importance
-- Provides comprehensive summaries
+## 🤖 AI Summarization 
+   Summarization (TextRank/BART)
 
 ## 📈 Analytics Features
 
@@ -308,19 +294,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- **Z.ai Web Development SDK** for AI summarization capabilities
 - **Next.js** team for the excellent framework
 - **shadcn/ui** for beautiful UI components
 - **Prisma** for the modern database toolkit
 - **Academic institutions** that inspired this project
-
-## 📞 Support
-
-For support and questions:
-- Create an issue in the repository
-- Check the documentation
-- Review the code comments
-
 ---
 
 **AcademiQ** - Empowering academic excellence through AI-driven research management and analytics.

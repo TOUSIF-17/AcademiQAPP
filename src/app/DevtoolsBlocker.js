@@ -16,12 +16,13 @@ export default function DevtoolsBlocker() {
 
     // Block common shortcuts (not bulletproof)
     const onKey = e => {
-      const key = e.key.toLowerCase();
-      if (e.ctrlKey && key === 'u' ||
+      // Guard against events that don't have a .key (some browser/composed events)
+      const key = e && e.key ? String(e.key).toLowerCase() : '';
+      if (e && (e.ctrlKey && key === 'u' ||
       // View source
       e.ctrlKey && e.shiftKey && (key === 'i' || key === 'j' || key === 'c') ||
       // DevTools
-      key === 'f12') {
+      key === 'f12')) {
         e.preventDefault();
         e.stopPropagation();
       }

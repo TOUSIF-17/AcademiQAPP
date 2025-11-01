@@ -70,3 +70,26 @@ export async function PUT(request) {
     });
   }
 }
+
+export async function DELETE(request) {
+  try {
+    const decoded = verifyToken(request);
+    if (!decoded) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const userId = decoded.userId;
+
+    // Delete related publications and feedback explicitly to ensure cleanup
+    await db.publication.deleteMany({ where: { authorId: userId } });
+    await db.feedback.deleteMany({ where: { facultyId: userId } });
+
+    // Delete the user
+    await db.user.delete({ where: { id: userId } });
+
+    return NextResponse.json({ message: 'Account and all related data deleted' }, { status: 200 });
+  } catch (error) {
+    console.error('Delete account error:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}
