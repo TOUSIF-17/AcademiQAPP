@@ -90,8 +90,8 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd academiq
+   git clone https://github.com/TOUSIF-17/AcademiQAPP.git
+   cd AcademiQAPP
    ```
 
 2. **Install dependencies**
