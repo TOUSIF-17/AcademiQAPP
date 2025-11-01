@@ -24,7 +24,7 @@ A comprehensive web application that automates faculty research profile manageme
 
 ### Frontend
 - **Framework**: Next.js 15 with App Router
-- **Language**: JavaScript/ReactJS
+- **Language**: ReactJS/JavaScript
 - **Styling**: Tailwind CSS 4
 - **UI Components**: shadcn/ui (New York style)
 - **Icons**: Lucide React
